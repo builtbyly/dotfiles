@@ -2,9 +2,7 @@
 
 Repo:
 
-- `https://github.com/builtbyly/dotfiles`
-
-This repo currently tracks only the config I care about keeping:
+This repo currently tracks configuration files for:
 
 - `nvim/`
 - `zshrc/`
