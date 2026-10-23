@@ -79,7 +79,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  gradle-completion
+  gradle
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -122,23 +122,33 @@ export PATH="$HOME/.local/bin:$PATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 alias v=nvim
-alias gn='git --no-pager'
-alias gs='git status'
-alias gw='./gradlew'
-alias gdd='git diff | diff-so-fancy'
 
-# Function for git diff with variable range and diff-so-fancy
-gdf() {
-  git diff "$1" | diff-so-fancy
+# use ./gradlew if found, else global gradle
+gw() {
+    local dir="$PWD"
+    while [[ "$dir" != / ]]; do
+        if [[ -x "$dir/gradlew" ]]; then
+            "$dir/gradlew" "$@"
+            return
+        fi
+        dir="${dir:h}"
+    done
+    command gradle "$@"
 }
 
+# Bind tab completion to the wrapper function as well
+compdef _gradle gw
+
+alias gr='rg'
+alias sgr='ast-grep'
+
+alias gn='git --no-pager'
+alias gs='git status'
 alias gapf='git add --all && git commit --amend --no-edit && git push origin "$(git_current_branch)" --force-with-lease --force-if-includes'
 alias gaaa='git add --all && git commit --amend --no-edit'
-alias gdw="git diff --word-diff"
-alias gdcaw="git diff --cached --word-diff"
-alias glolr="git log HEAD...origin/master --oneline --left-right"
 
-# git worktree aliases
+alias ggpushf='git push origin "$(git_current_branch)" --force-with-lease --force-if-includes'
+
 alias gwt='git worktree'
 alias gwtls='git worktree list'
 alias gwtc='git worktree add'
@@ -150,21 +160,45 @@ alias gtwm='git worktree move'
 alias gwtf='git worktree repair'
 alias gwtpr='git worktree add --prune --detach -b pr-$(git rev-parse --short HEAD) origin/$(git rev-parse --abbrev-ref HEAD)'
 
+alias gbl='git blame -w -C'
+
+# ==========================================
+# GIT FORENSICS & HISTORY
+# ==========================================
+
+alias glg='git log --graph --oneline --all --decorate'
+alias glf='git log --follow -p'
+alias glp='git log -S'
+alias glgr='git log --oneline -G'
+alias glch='git log --name-status -M -C'
+alias glr='git log HEAD...origin/$(git symbolic-ref refs/remotes/origin/HEAD | sed "s@^refs/remotes/origin/@@") --oneline --left-right'
+gtr() {
+    git log -L ":$1:$2"
+}
+
+alias gdd='git diff | diff-so-fancy'
+alias gdw="git diff --word-diff"
+alias gdcaw="git diff --cached --word-diff"
+gdf() {
+  git diff "$1" | diff-so-fancy
+}
+
 alias l='eza -la --classify'
 alias lt='eza -l --tree --only-dirs --level 2 --classify'
 alias lg='eza -la --git --git-ignore'
 
+alias fdh='fd --hidden'
+
 alias d='docker'
-alias dc='docker-compose'
-alias dcu='docker-compose up'
-alias dcd='docker-compose down'
-alias dcb='docker-compose build'
-alias dcl='docker-compose logs -f'
-alias dcr='docker-compose run --rm'
-alias dce='docker-compose exec'
-
-alias sg='ast-grep'
-
+alias dps='docker ps'
+alias dc='docker compose'
+alias dcps='docker compose ps'
+alias dcu='docker compose up'
+alias dcd='docker compose down'
+alias dcb='docker compose build'
+alias dcl='docker compose logs -f'
+alias dcr='docker compose run --rm'
+alias dce='docker compose exec'
 
 # disk usage
 alias du='du -h -d 1'
@@ -187,7 +221,81 @@ alias as-tree='tree --fromfile'
 alias as-tree-android='tree --fromfile -I "build|gradle|gradlew|gradlew.bat|local.properties|settings.gradle"'
 alias t='tree -L 2'
 
-# Android
+
+# helper function to fascilitate the secrets' lookup and setting
+secret() {
+  local command="$1"
+  local service="$2"
+  local account="${3:-$USER}"
+
+  case "$command" in
+    set)
+      local label="${4:-$service}"
+      local comment="${5:-}"
+      local value
+
+      # Read it ourselves: `security -w` with no value prompts via
+      # readpassphrase, which silently truncates at 128 characters.
+      read -rs "value?Secret for $service: " || return 1
+      echo
+      if [[ -z "$value" ]]; then
+        echo "Empty secret, nothing stored." >&2
+        return 1
+      fi
+
+      security add-generic-password \
+        -U \
+        -s "$service" \
+        -a "$account" \
+        -l "$label" \
+        -j "$comment" \
+        -w "$value"
+        local rc=$?
+        unset value
+        return $rc
+      ;;
+
+    get)
+      security find-generic-password \
+        -s "$service" \
+        -a "$account" \
+        -w
+      ;;
+
+    clip)
+      local value
+      if ! value=$(security find-generic-password \
+        -s "$service" \
+        -a "$account" \
+        -w
+      ); then
+        echo "Secret not found: $service / $account" >&2
+        return 1
+      fi
+
+      print -nr -- "$value" | pbcopy
+      ;;
+
+    exists)
+      security find-generic-password \
+        -s "$service" \
+        -a "$account" \
+        >/dev/null 2>&1
+      ;;
+
+    delete)
+      security delete-generic-password \
+        -s "$service" \
+        -a "$account"
+      ;;
+
+    *)
+      echo "Usage: secret {set|get|clip|exists|delete} <service> [account] [label] [comment]" >&2
+      return 2
+      ;;
+  esac
+}
+
 export PATH=$PATH:/usr/local/pkg/android-sdk/platform-tools
 export PATH=$PATH:/usr/local/pkg/android-sdk/cmdline-tools
 export PATH=$PATH:/usr/local/pkg/android-sdk/emulator
