@@ -146,6 +146,7 @@ alias gn='git --no-pager'
 alias gs='git status'
 alias gapf='git add --all && git commit --amend --no-edit && git push origin "$(git_current_branch)" --force-with-lease --force-if-includes'
 alias gaaa='git add --all && git commit --amend --no-edit'
+alias gap='git add -p'
 
 alias ggpushf='git push origin "$(git_current_branch)" --force-with-lease --force-if-includes'
 
