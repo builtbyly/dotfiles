@@ -1,0 +1,1 @@
+{ "name": "desktop-status", "version": "0.3.0", "description": "Desktop status band: repo/worktree, git branch, model, context bar, rate limits, run time and cost (mirrors statusline-command.sh)", "types": "./types/index.d.ts" }
