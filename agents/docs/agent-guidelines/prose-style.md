@@ -1,0 +1,34 @@
+# Prose Style Guidelines
+
+## The 21 Rules
+
+Canonical rules (from Strunk & White 1959, Orwell 1946, Pinker 2014, Gopen & Swan 1990):
+- **RULE-01 Curse of knowledge**: Name your intended reader; do not assume they share your tacit knowledge.
+- **RULE-02 Passive voice**: Prefer active voice when the agent is known and worth naming.
+- **RULE-03 Concrete language**: Prefer concrete, specific terms over abstract category words like "factors" or "aspects"; state a result's pattern and rounded magnitude, say in plain words whether a difference holds, and leave standard deviations, intervals, and full numbers to tables. Never call a difference within noise a gain. Do not stack figures in consecutive sentences, and keep a caption to what the display shows. Report differences in points or percent rather than raw decimals, keep one unit and sign across text, tables, and captions, and add a table when several figures matter and no display holds them.
+- **RULE-04 Needless words**: Cut filler phrases like "in order to", "due to the fact that", "may potentially", "it is worth noting", "crucial next step", and "here is a breakdown". Cut sentences that announce, restate the method, or repeat a finding. An abstract goes from the problem and its challenge to the approach and findings, and a conclusion stays short.
+- **RULE-05 Dying metaphors**: Delete clichés like "pushes the boundaries", "paradigm shift", or "state of the art".
+- **RULE-06 Plain English**: Prefer "use" over "leverage", "method" over "methodology", "feature" over "functionality".
+- **RULE-07 Positive form**: Prefer "trivial" to "not important", "forgot" to "did not remember"; do not stage "X, not Y" antithesis ("not just X, but Y") for emphasis.
+- **RULE-08 Claim calibration**: Calibrate verbs to evidence; do not write "proves" when the evidence is "suggests"; keep qualifiers that change the claim, and cut caveat tails that add nothing.
+- **RULE-09 Parallel structure**: Express coordinate ideas in the same grammatical form.
+- **RULE-10 Related words together**: Keep subject close to verb and modifier close to modified; split long parentheticals.
+- **RULE-11 Stress position**: Place new or important information at the end of the sentence.
+- **RULE-12 Long sentences**: Vary sentence length; split a sentence when the reader must hold more than one open clause to reach its point, and let a long sentence stay if it carries one connected thought.
+
+## Field-observed rules
+
+- **RULE-A Bullet overuse**: Keep prose in paragraphs when ideas connect; bullets only for genuine lists; avoid forced 3-item triads; table cells hold numbers or short labels.
+- **RULE-B Dash overuse**: Do not use em or en dashes as casual sentence punctuation; prefer commas, colons, parentheses, or a new sentence; keep semicolons rare.
+- **RULE-C Same-starts**: Do not open two or more consecutive sentences with the same word.
+- **RULE-D Transitions**: Do not open sentences with additive-only transitions ("Additionally", "Furthermore", "In addition") or a stock pivot such as "That said". Let "Moreover" or "Notably" open at most one sentence in a paragraph. Keep words that mark a contrast, cause, or sequence the text already establishes ("However", "Thus", "First"), and never add a cause just to join sentences.
+- **RULE-E Summary closers**: Do not end every paragraph with a sentence that restates its point.
+- **RULE-F Term consistency**: Once you define a term or abbreviation, keep using it; do not alternate synonyms.
+- **RULE-G Title case**: Use title case for section and subsection headings; articles and short prepositions stay lowercase. A full-sentence bold run-in lead takes sentence case.
+- **RULE-H Citation discipline (critical)**: Support factual claims with verifiable citation or concrete evidence; never fabricate citations.
+- **RULE-I Contractions**: Prefer "it is" / "does not" / "cannot" over "it's" / "doesn't" / "can't" in formal technical prose.
+
+## Escape Hatch
+
+*"Break any of these rules sooner than say anything outright barbarous."* — George Orwell, "Politics and the English Language" (1946), Rule 6. Most rules are defaults to apply with judgment. Depart when the sentence reads better for it, not to vary the pattern. A few are firm (do not invent citations, evidence, or numbers; no placeholders in finished text). Judge a draft by its overall pattern: one that obeys every default in every sentence reads as machine-made.
+
