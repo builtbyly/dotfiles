@@ -222,6 +222,22 @@ alias as-tree='tree --fromfile'
 alias as-tree-android='tree --fromfile -I "build|gradle|gradlew|gradlew.bat|local.properties|settings.gradle"'
 alias t='tree -L 2'
 
+# Print the path of the main checkout, from the main checkout or any of its worktrees.
+gitbase() {
+  local common
+  common=$(git rev-parse --path-format=absolute --git-common-dir 2>/dev/null) || {
+    print -u2 "gitbase: not inside a git repository"
+    return 1
+  }
+  print -r -- ${common:h} # -r -- is defensive: a git path almost never contains backslashes or starts with -.
+}
+
+# cd to the main checkout, or to a path under it: `cdbase docs/agents`.
+cdbase() {
+  local base
+  base=$(gitbase) || return
+  cd -- "$base/${1:-}"
+}
 
 # helper function to fascilitate the secrets' lookup and setting
 secret() {
