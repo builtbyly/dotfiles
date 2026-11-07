@@ -19,6 +19,16 @@ This repository tracks configuration and reusable agent instructions for:
 
 The root instruction file stays minimal. Agents load the linked guidance only when its task trigger applies.
 
+Repository-scope harness adapters point to the canonical file:
+
+- `AGENTS.md` — Zed, Codex, and other AGENTS-aware harnesses
+- `CLAUDE.md` — Claude Code
+- `GEMINI.md` — Gemini CLI
+- `.github/copilot-instructions.md` — GitHub Copilot
+- `.cursor/rules/canonical-agent-instructions.mdc` — Cursor
+
+The canonical file and plain Markdown adapters use repository-defined frontmatter. The `type` field classifies a document as `canonical` or `adapter`. The canonical file carries one version for the complete linked guidance tree; adapters identify their repository-relative canonical source. Linked guidance files do not carry independent versions. Cursor retains only its native frontmatter because Cursor owns that schema.
+
 ## Live paths
 
 - `~/.config/nvim` -> `~/dev/dotfiles/nvim`

@@ -1,3 +1,8 @@
+---
+type: canonical
+version: 1
+---
+
 # Agent instructions
 
 This repository contains reusable agent instructions and supporting guidance for software-engineering work.
