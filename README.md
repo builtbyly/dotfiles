@@ -1,11 +1,23 @@
 # dotfiles
 
-Repo:
+This repository tracks configuration and reusable agent instructions for:
 
-This repo currently tracks configuration files for:
-
+- `agents/`
 - `nvim/`
 - `zshrc/`
+
+## Agent instructions
+
+`agents/AGENTS.md` contains the project-wide agent guardrails and links to task-specific guidance under `agents/docs/agent-guidelines/`:
+
+- `ai-attribution.md` — AI disclosure and DCO signoff
+- `changes-and-review.md` — code changes, review passes, and pull-request organization
+- `git-workflow.md` — commits, branches, rebasing, and pushes
+- `prose-style.md` — general prose conventions
+- `scripting.md` — script language selection
+- `technical-writing.md` — technical-documentation conventions
+
+The root instruction file stays minimal. Agents load the linked guidance only when its task trigger applies.
 
 ## Live paths
 
