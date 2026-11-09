@@ -25,16 +25,13 @@ The root instruction file stays minimal. Agents load the linked guidance only wh
 
 ### Harness setup
 
-Harness adapters are not maintained by this repository. Configure each harness to load `agents/AGENTS.md` directly, or create a local adapter in the location that harness expects. The adapter should point to the canonical file rather than duplicate its contents, for example:
+Harness adapters are not maintained by this repository. After completing the setup below, configure your harness to load `~/.config/agents/AGENTS.md`.
 
-```markdown
-Before any task, read and follow the repository-root `agents/AGENTS.md`, including any task-specific guidance it links.
-```
-
-Check the harness documentation for its current adapter location and format.
+If the harness requires an adapter, point it to that canonical file rather than duplicating its contents. Check the harness documentation for its current adapter location, import syntax, and format.
 
 ## Live paths
 
+- `~/.config/agents` -> `~/dev/dotfiles/agents`
 - `~/.config/nvim` -> `~/dev/dotfiles/nvim`
 - `~/.zshrc` -> `~/dev/dotfiles/zshrc/.zshrc`
 
@@ -66,6 +63,7 @@ git clone https://github.com/builtbyly/dotfiles ~/dev/dotfiles
 Back up any existing config you want to keep:
 
 ```sh
+mv ~/.config/agents ~/.config/agents.backup
 mv ~/.config/nvim ~/.config/nvim.backup
 mv ~/.zshrc ~/.zshrc.backup
 ```
@@ -74,6 +72,7 @@ Create the symlinks:
 
 ```sh
 mkdir -p ~/.config
+ln -s ~/dev/dotfiles/agents ~/.config/agents
 ln -s ~/dev/dotfiles/nvim ~/.config/nvim
 ln -s ~/dev/dotfiles/zshrc/.zshrc ~/.zshrc
 ```
