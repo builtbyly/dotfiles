@@ -11,9 +11,13 @@ This repository tracks configuration and reusable agent instructions for:
 `agents/AGENTS.md` contains the project-wide agent guardrails and links to task-specific guidance under `agents/docs/agent-guidelines/`:
 
 - `ai-attribution.md` — AI disclosure and DCO signoff
+- `atlassian-workflow.md` — Jira and Confluence operations
 - `changes-and-review.md` — code changes, review passes, and pull-request organization
+- `context-management.md` — compaction, drift detection, and handoffs
 - `git-workflow.md` — commits, branches, rebasing, and pushes
+- `planning.md` — task-plan conventions
 - `prose-style.md` — general prose conventions
+- `quantitative-writing.md` — measurements, comparisons, and statistical findings
 - `scripting.md` — script language selection
 - `technical-writing.md` — technical-documentation conventions
 

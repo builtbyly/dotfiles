@@ -1,11 +1,9 @@
 # Prose Style Guidelines
 
-## The 21 Rules
-
-Canonical rules (from Strunk & White 1959, Orwell 1946, Pinker 2014, Gopen & Swan 1990):
+## Canonical Rules
 - **RULE-01 Curse of knowledge**: Name your intended reader; do not assume they share your tacit knowledge.
 - **RULE-02 Passive voice**: Prefer active voice when the agent is known and worth naming.
-- **RULE-03 Concrete language**: Prefer concrete, specific terms over abstract category words like "factors" or "aspects"; state a result's pattern and rounded magnitude, say in plain words whether a difference holds, and leave standard deviations, intervals, and full numbers to tables. Never call a difference within noise a gain. Do not stack figures in consecutive sentences, and keep a caption to what the display shows. Report differences in points or percent rather than raw decimals, keep one unit and sign across text, tables, and captions, and add a table when several figures matter and no display holds them.
+- **RULE-03 Concrete language**: Prefer concrete, specific terms over abstract category words like "factors" or "aspects".
 - **RULE-04 Needless words**: Cut filler phrases like "in order to", "due to the fact that", "may potentially", "it is worth noting", "crucial next step", and "here is a breakdown". Cut sentences that announce, restate the method, or repeat a finding. An abstract goes from the problem and its challenge to the approach and findings, and a conclusion stays short.
 - **RULE-05 Dying metaphors**: Delete clichés like "pushes the boundaries", "paradigm shift", or "state of the art".
 - **RULE-06 Plain English**: Prefer "use" over "leverage", "method" over "methodology", "feature" over "functionality".
@@ -31,4 +29,8 @@ Canonical rules (from Strunk & White 1959, Orwell 1946, Pinker 2014, Gopen & Swa
 ## Escape Hatch
 
 *"Break any of these rules sooner than say anything outright barbarous."* — George Orwell, "Politics and the English Language" (1946), Rule 6. Most rules are defaults to apply with judgment. Depart when the sentence reads better for it, not to vary the pattern. A few are firm (do not invent citations, evidence, or numbers; no placeholders in finished text). Judge a draft by its overall pattern: one that obeys every default in every sentence reads as machine-made.
+
+## Sources
+
+These guidelines draw from Strunk and White, Orwell, Pinker, and Gopen and Swan.
 

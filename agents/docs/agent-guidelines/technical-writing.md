@@ -8,4 +8,3 @@ Use these rules in addition to the general prose style when writing or editing t
 - Preserve exact identifiers, commands, paths, configuration keys, and error messages.
 - Explain constraints and tradeoffs that affect implementation decisions.
 - Use numbered steps when order matters and state the observable completion condition.
-- Omit apologies and summaries that merely repeat visible changes.

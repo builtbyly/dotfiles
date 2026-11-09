@@ -4,7 +4,7 @@ Use these rules when creating or reviewing code, planning large generated change
 
 ## Repository-specific guidance
 
-Before changing or reviewing code, read the repository's `README.md` and any contribution guidance it points to, including `CONTRIBUTING.md` when present.
+Before changing or reviewing code, read the repository's `README.md`, `CONTRIBUTING.md`, and any review guidance they reference when those files are present.
 
 Apply these files when present:
 
@@ -14,7 +14,7 @@ Apply these files when present:
 
 ## Review pass
 
-After each commit, and before declaring a task complete, use a subagent to review the change against the applicable review guidance and look for other issues. Apply the same guidance when reviewing someone else's code.
+Before declaring a non-trivial code task complete, use a subagent, when available, to review the change for correctness, regressions, missing tests, and violations of applicable repository guidance. Apply the same guidance when reviewing someone else's code.
 
 ## Large generated changes
 
