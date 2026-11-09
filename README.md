@@ -23,15 +23,15 @@ This repository tracks configuration and reusable agent instructions for:
 
 The root instruction file stays minimal. Agents load the linked guidance only when its task trigger applies.
 
-Repository-scope harness adapters point to the canonical file:
+### Harness setup
 
-- `AGENTS.md` — Zed, Codex, and other AGENTS-aware harnesses
-- `CLAUDE.md` — Claude Code
-- `GEMINI.md` — Gemini CLI
-- `.github/copilot-instructions.md` — GitHub Copilot
-- `.cursor/rules/canonical-agent-instructions.mdc` — Cursor
+Harness adapters are not maintained by this repository. Configure each harness to load `agents/AGENTS.md` directly, or create a local adapter in the location that harness expects. The adapter should point to the canonical file rather than duplicate its contents, for example:
 
-The canonical file and plain Markdown adapters use repository-defined frontmatter. The `type` field classifies a document as `canonical` or `adapter`. The canonical file carries one version for the complete linked guidance tree; adapters identify their repository-relative canonical source. Linked guidance files do not carry independent versions. Cursor retains only its native frontmatter because Cursor owns that schema.
+```markdown
+Before any task, read and follow the repository-root `agents/AGENTS.md`, including any task-specific guidance it links.
+```
+
+Check the harness documentation for its current adapter location and format.
 
 ## Live paths
 
