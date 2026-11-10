@@ -2,6 +2,10 @@
 
 Use these rules for Git operations and repository workflow changes.
 
+## Worktrees
+
+Before creating a worktree, propose the worktree directory and branch names, then wait for user approval.
+
 ## Commits
 
 Use short, single-sentence Conventional Commit messages.

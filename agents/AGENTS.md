@@ -1,6 +1,6 @@
 ---
 type: canonical
-version: 2
+version: 3
 ---
 
 # Universal guardrails
