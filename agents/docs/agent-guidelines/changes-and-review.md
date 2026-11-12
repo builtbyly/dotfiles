@@ -2,9 +2,9 @@
 
 Use these rules when creating or reviewing code, planning large generated changes, or organizing pull requests.
 
-## Repository-specific guidance
+Do not describe AI-assisted code as approved or ready to merge until a human has reviewed it.
 
-Before changing or reviewing code, read the repository's `README.md`, `CONTRIBUTING.md`, and any review guidance they reference when those files are present.
+## Repository-specific guidance
 
 Apply these files when present:
 

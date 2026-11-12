@@ -2,6 +2,10 @@
 
 Use these rules for Git operations and repository workflow changes.
 
+## Explicit Authorization
+
+Create branches, commits, pushes, pull requests, issues, and other remote repository changes only when explicitly requested.
+
 ## Worktrees
 
 Before creating a worktree, propose the worktree directory and branch names, then wait for user approval.
@@ -18,7 +22,6 @@ When asked to commit and push:
 2. Rebase onto the main branch unless the user requests another base or strategy.
 3. Inspect the commit history after rebasing.
 4. Squash `wip` and `fixup` commits into the most logical commit before pushing.
-
 
 ## Preventing repeated mistakes
 
