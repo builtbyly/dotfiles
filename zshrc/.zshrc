@@ -224,7 +224,7 @@ alias as-tree-android='tree --fromfile -I "build|gradle|gradlew|gradlew.bat|loca
 alias t='tree -L 2'
 
 # Print the path of the main checkout, from the main checkout or any of its worktrees.
-gitbase() {
+gbase() {
   local common
   common=$(git rev-parse --path-format=absolute --git-common-dir 2>/dev/null) || {
     print -u2 "gitbase: not inside a git repository"
