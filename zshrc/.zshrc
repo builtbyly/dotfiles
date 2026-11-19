@@ -168,6 +168,7 @@ alias gbl='git blame -w -C'
 # ==========================================
 
 alias glg='git log --graph --oneline --all --decorate'
+alias glm='git log --oneline --no-merges origin/master..HEAD'
 alias glf='git log --follow -p'
 alias glp='git log -S'
 alias glgr='git log --oneline -G'
