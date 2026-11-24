@@ -25,6 +25,7 @@
 - **RULE-G Title case**: Use title case for section and subsection headings; articles and short prepositions stay lowercase. A full-sentence bold run-in lead takes sentence case.
 - **RULE-H Citation discipline (critical)**: Support factual claims with verifiable citation or concrete evidence; never fabricate citations.
 - **RULE-I Contractions**: Prefer "it is" / "does not" / "cannot" over "it's" / "doesn't" / "can't" in formal technical prose.
+- **RULE-J Literal mechanisms**: When figurative engineering shorthand obscures the mechanism, replace it with the concrete dependency, failure, evidence, goal, or precondition. Keep established technical terms when they are precise for the intended reader.
 
 ## Escape Hatch
 
@@ -33,4 +34,3 @@
 ## Sources
 
 These guidelines draw from Strunk and White, Orwell, Pinker, and Gopen and Swan.
-

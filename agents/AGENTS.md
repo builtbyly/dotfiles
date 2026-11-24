@@ -1,6 +1,6 @@
 ---
 type: canonical
-version: 4
+version: 5
 ---
 
 # Agent Instructions
