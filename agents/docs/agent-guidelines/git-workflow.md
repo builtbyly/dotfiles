@@ -1,4 +1,4 @@
-# Git workflow
+# Git Workflow
 
 Use these rules for Git operations and repository workflow changes.
 
@@ -23,6 +23,10 @@ When asked to commit and push:
 3. Inspect the commit history after rebasing.
 4. Squash `wip` and `fixup` commits into the most logical commit before pushing.
 
-## Preventing repeated mistakes
+## Stacked Pull Requests
+
+When asked to create or modify a pull-request stack, read [Stacked pull requests](stacked-pull-requests.md).
+
+## Preventing Repeated Mistakes
 
 When asked to undo an AI-written change, determine whether its cause is already addressed by `AGENTS.md`. If the mistake is not obvious and no existing instruction covers it, suggest a preventive `AGENTS.md` change. Obtain permission before editing the instructions.

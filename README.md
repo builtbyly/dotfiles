@@ -19,6 +19,7 @@ This repository tracks configuration and reusable agent instructions for:
 - `prose-style.md` — general prose conventions
 - `quantitative-writing.md` — measurements, comparisons, and statistical findings
 - `scripting.md` — script language selection
+- `stacked-pull-requests.md` — review-safe stacked pull-request workflow
 - `technical-writing.md` — technical-documentation conventions
 
 The root instruction file stays minimal. Agents load the linked guidance only when its task trigger applies.

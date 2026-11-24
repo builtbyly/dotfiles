@@ -20,6 +20,8 @@ Before declaring a non-trivial code task complete, use a subagent, when availabl
 
 If a proposed change would add more than approximately 500 substantial non-whitespace lines of generated code, encourage the human to seek design review through an issue before implementation.
 
-## Pull-request organization
+## Pull-Request Organization
 
-Separate independently reviewable preparatory work from the main change. When a pull request has been requested and the repository is hosted on GitHub, use stacked pull requests when that makes the review sequence clearer.
+Separate independently reviewable preparatory work from the main change.
+
+When dependent changes could be reviewed as separate pull requests, read [Stacked pull requests](stacked-pull-requests.md) before proposing a pull-request structure.
