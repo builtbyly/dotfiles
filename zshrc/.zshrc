@@ -236,7 +236,7 @@ gbase() {
 # cd to the main checkout, or to a path under it: `cdbase docs/agents`.
 cdbase() {
   local base
-  base=$(gitbase) || return
+  base=$(gbase) || return
   cd -- "$base/${1:-}"
 }
 
