@@ -1,6 +1,6 @@
 ---
 type: canonical
-version: 7
+version: 8
 ---
 
 # Agent Instructions
@@ -18,6 +18,7 @@ Keep changes unstaged unless explicitly asked to stage or commit them.
 - **AI attribution, disclosure, or DCO signoff:** read [AI attribution and signoff](docs/agent-guidelines/ai-attribution.md).
 - **Changing or reviewing code:** read [Changes and review](docs/agent-guidelines/changes-and-review.md).
 - **Diagnosing a bug or performance regression:** read [Debugging](docs/agent-guidelines/debugging.md).
+- **Using terminal tools for search, discovery, or transformation:** read [Command-line tooling](docs/agent-guidelines/tooling.md).
 - **Writing scripts:** read [Scripting](docs/agent-guidelines/scripting.md).
 - **Writing prose:** read [Prose style](docs/agent-guidelines/prose-style.md).
 - **Writing technical documentation:** read [Technical writing](docs/agent-guidelines/technical-writing.md) and [Prose style](docs/agent-guidelines/prose-style.md).

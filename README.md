@@ -22,6 +22,7 @@ This repository tracks configuration and reusable agent instructions for:
 - `scripting.md` — script language selection
 - `stacked-pull-requests.md` — review-safe stacked pull-request workflow
 - `technical-writing.md` — technical-documentation conventions
+- `tooling.md` — preferred command-line tools and portability fallbacks
 
 The root instruction file stays minimal. Agents load the linked guidance only when its task trigger applies.
 
@@ -45,10 +46,13 @@ Install at least:
 - `zsh`
 - `nvim`
 
-For a better Neovim experience, also install:
+For better command-line, agent, and Neovim workflows, also install:
 
 - `rg`
 - `fd`
+- `sd`
+- `jq`
+- `yq`
 - `tree-sitter`
 - `node`
 - `npm`
