@@ -1,11 +1,11 @@
 ---
 type: canonical
-version: 6
+version: 7
 ---
 
 # Agent Instructions
 
-This repository contains shared instructions and task-specific guidance for coding agents.
+This dotfiles repository tracks personal configuration and reusable instructions for coding agents.
 
 Keep changes unstaged unless explicitly asked to stage or commit them.
 
@@ -17,6 +17,7 @@ Keep changes unstaged unless explicitly asked to stage or commit them.
 - **Jira or Confluence operations:** read [Atlassian workflow](docs/agent-guidelines/atlassian-workflow.md).
 - **AI attribution, disclosure, or DCO signoff:** read [AI attribution and signoff](docs/agent-guidelines/ai-attribution.md).
 - **Changing or reviewing code:** read [Changes and review](docs/agent-guidelines/changes-and-review.md).
+- **Diagnosing a bug or performance regression:** read [Debugging](docs/agent-guidelines/debugging.md).
 - **Writing scripts:** read [Scripting](docs/agent-guidelines/scripting.md).
 - **Writing prose:** read [Prose style](docs/agent-guidelines/prose-style.md).
 - **Writing technical documentation:** read [Technical writing](docs/agent-guidelines/technical-writing.md) and [Prose style](docs/agent-guidelines/prose-style.md).

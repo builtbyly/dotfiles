@@ -14,6 +14,7 @@ This repository tracks configuration and reusable agent instructions for:
 - `atlassian-workflow.md` — Jira and Confluence operations
 - `changes-and-review.md` — code changes, review passes, and pull-request organization
 - `context-management.md` — compaction, drift detection, and handoffs
+- `debugging.md` — evidence-driven diagnosis and regression prevention
 - `git-workflow.md` — commits, branches, rebasing, and pushes
 - `planning.md` — task-plan conventions
 - `prose-style.md` — general prose conventions
